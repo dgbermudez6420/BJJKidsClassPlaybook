@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>One last time — your order is almost complete</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#132321;--muted:#5c716f;--line:#dbe3e1;--light:#f1f4f3;--light2:#e7ecea;
+  --cta:#ff5c39;--cta-d:#d8431f;--go:#1f9e88;--amber:#f0a500;--warn:#c62828;--pad:18px;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:#fff;color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,sans-serif;font-size:16.5px;line-height:1.6}
+img{max-width:100%;display:block;height:auto}
+h1,h2,h3,.bebas{font-family:"Bebas Neue",Impact,sans-serif;font-weight:400;letter-spacing:.012em;line-height:1.04}
+h1{font-size:clamp(29px,8vw,44px);margin:0 0 14px}
+h2{font-size:clamp(22px,6.2vw,31px);margin:0 0 12px}
+h3{font-size:19px;margin:0 0 6px;letter-spacing:.01em}
+p{margin:0 0 14px}
+section{padding:32px var(--pad)}
+.wrap{max-width:620px;margin:0 auto}
+.center{text-align:center}
+.muted{color:var(--muted)}
+.small{font-size:13.5px;line-height:1.55}
+.eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--cta);margin-bottom:9px}
+
+.warnbar{background:var(--warn);color:#fff;text-align:center;padding:11px 14px;font-size:13.5px;font-weight:600;line-height:1.45}
+
+.hero{padding:28px var(--pad) 24px;text-align:center;background:var(--light)}
+.hero p.sub{font-size:17px;color:var(--muted);max-width:470px;margin:0 auto}
+.hero p.sub strong{color:var(--ink)}
+
+.prog{max-width:430px;margin:24px auto 0;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px}
+.prog .top{display:flex;justify-content:space-between;font-size:12.5px;font-weight:700;color:var(--muted);margin-bottom:8px;letter-spacing:.03em}
+.prog .top b{color:var(--go)}
+.prog .track{height:10px;background:#dde5e3;border-radius:100px;overflow:hidden}
+.prog .fill{height:100%;width:0;background:linear-gradient(90deg,var(--amber),var(--go));border-radius:100px;transition:width 1.6s ease-out}
+.prog .note{font-size:12.5px;color:var(--muted);margin:10px 0 0;line-height:1.5}
+.prog .note b{color:var(--ink)}
+
+.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:17px;margin-bottom:12px}
+.card.accent{border-left:4px solid var(--cta);background:#fff7f4}
+.card.dark{background:var(--ink);border:0;color:#e7eeec}
+.card.dark h3{color:#fff}
+.card.dark p{color:#c6d3d0}
+.card p:last-child{margin:0}
+
+/* objection Q&A */
+.qa{background:#fff;border:1px solid var(--line);border-radius:10px;margin-bottom:12px;overflow:hidden}
+.qa .q{display:flex;gap:11px;background:var(--light);padding:13px 15px;font-size:15.5px;line-height:1.5;font-weight:700;color:var(--muted);font-style:italic}
+.qa .q .m{flex:0 0 22px;height:22px;border-radius:50%;background:#fff;border:1px solid var(--line);color:var(--muted);font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center;font-style:normal;margin-top:1px}
+.qa .a{display:flex;gap:11px;padding:14px 15px;font-size:15.5px;line-height:1.58}
+.qa .a .m{flex:0 0 22px;height:22px;border-radius:50%;background:var(--go);color:#fff;font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;margin-top:2px}
+
+/* mockups */
+.mockup{margin:22px 0 6px;text-align:center}
+.mockup img{width:70%;max-width:290px;margin:0 auto;filter:drop-shadow(0 18px 34px rgba(19,35,33,.30))}
+.mockup-offer{margin:0 0 6px;text-align:center}
+.mockup-offer img{width:100%;max-width:500px;margin:0 auto;filter:drop-shadow(0 16px 30px rgba(19,35,33,.26))}
+.mockcap{font-size:12.5px;color:var(--muted);text-align:center;margin:6px 0 0}
+
+/* price */
+.pricebox{background:#fff;border:2px solid var(--cta);border-radius:14px;padding:24px 20px;text-align:center;box-shadow:0 10px 30px rgba(19,35,33,.10);position:relative}
+.saveflag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--amber);color:#3a2600;font-size:12px;font-weight:800;padding:5px 13px;border-radius:5px;letter-spacing:.04em;white-space:nowrap}
+.pricebox .lbl{font-size:13.5px;color:var(--muted);margin:8px 0 0}
+.pricebox .was{color:var(--muted);text-decoration:line-through;font-size:19px}
+.pricebox .now{font-family:"Bebas Neue",sans-serif;font-size:clamp(30px,8.4vw,44px);line-height:1.02;display:block;margin:6px 0;color:var(--cta)}
+.pricebox .once{font-size:13.5px;color:var(--muted);margin-bottom:16px}
+.pricebox .seclabel{font-family:"Bebas Neue",sans-serif;font-size:14px;letter-spacing:.16em;color:var(--go);margin:16px 0 10px}
+.outcomes{list-style:none;margin:0 0 4px;padding:0;text-align:left}
+.outcomes li{display:flex;gap:10px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:15px;line-height:1.5}
+.outcomes li:last-child{border-bottom:0}
+.outcomes .tick{flex:0 0 20px;height:20px;border-radius:50%;background:var(--go);color:#fff;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:2px}
+
+.checkout{background:var(--light);border:1px solid var(--line);border-top:3px solid var(--cta);border-radius:8px;padding:16px 10px;min-height:120px}
+.checkout #hotmart-sales-funnel{width:100%}
+.checkout iframe{width:100%!important;max-width:100%!important;border:0;display:block}
+.seclock{font-size:12.5px;color:var(--muted);margin-top:12px;line-height:1.5}
+
+.decline{text-align:center;margin-top:20px}
+.decline a{color:var(--muted);font-size:14px;text-decoration:underline}
+
+.guar{border:2px solid var(--ink);border-radius:12px;padding:20px;background:#fff}
+.guar .badge{display:inline-block;background:var(--ink);color:var(--amber);font-family:"Bebas Neue",sans-serif;font-size:14px;letter-spacing:.08em;padding:6px 12px;border-radius:5px;margin-bottom:11px}
+
+.couplet{text-align:center;font-family:"Bebas Neue",sans-serif;font-size:clamp(20px,5.6vw,26px);line-height:1.25;letter-spacing:.01em}
+.couplet span{color:var(--cta)}
+
+footer{background:var(--light);color:var(--muted);padding:24px var(--pad) 32px;text-align:center;font-size:12.5px;border-top:1px solid var(--line)}
+
+@media(min-width:700px){:root{--pad:30px} section{padding:46px var(--pad)}}
+</style>
+</head>
+<body>
+
+<!-- 1 · WARNING -->
+<div class="warnbar">⚠️ Please don't close or refresh this page — it may interrupt your order.</div>
+
+<!-- 2 · HERO + PROGRESS -->
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">FINAL OFFER</span>
+    <h1>Hold on — I get it.</h1>
+    <p class="sub">I'm not going to repeat the pitch. <strong>I'm going to lower the bar instead.</strong></p>
+
+    <div class="prog">
+      <div class="top"><span>Your order</span><b>Step 3 of 3</b></div>
+      <div class="track"><div class="fill" id="fill"></div></div>
+      <p class="note"><b>This is the last screen before your downloads.</b> Nothing else gets asked of you after this.</p>
+    </div>
+  </div>
+</header>
+
+<!-- 3 · NORMALISE THE NO -->
+<section>
+  <div class="wrap">
+    <p style="font-size:17px"><strong>Saying "not today" is a completely reasonable call.</strong></p>
+    <p>Most people don't say yes to the first offer they see. Not because they don't trust it — but because they've already got the Playbook in hand and they think: <strong>I can probably work the rest out myself.</strong></p>
+    <p>So instead of selling you again, let me be straight about why I think this one is actually for you.</p>
+  </div>
+</section>
+
+<!-- 4 · REMEMBER WHY YOU BOUGHT -->
+<section style="background:var(--light)">
+  <div class="wrap">
+    <span class="eyebrow">REMEMBER WHY YOU BOUGHT IT</span>
+    <h2>You didn't buy twelve PDFs.<br>You bought the version of you that doesn't freeze at minute four.</h2>
+
+    <p>That's the real job you handed the Playbook. And that job <strong>doesn't get finished by reading</strong>. It gets finished on Tuesday, standing on the mat, when you open your mouth and fifteen kids do what you asked the first time.</p>
+
+    <p>Learn to Coach Kids is the part that finishes it.</p>
+
+    <div class="mockup">
+      <img src="images/upsell-mockup-hero.webp" alt="Learn to Coach Kids — the 28-page guide" width="895" height="1186" fetchpriority="high" decoding="async">
+    </div>
+  </div>
+</section>
+
+<!-- 5 · THE THREE OBJECTIONS -->
+<section>
+  <div class="wrap">
+    <h2>If you hesitated, it's probably one of these three</h2>
+    <p class="muted">Let me answer each one honestly.</p>
+
+    <div class="qa">
+      <div class="q"><span class="m">?</span><span>"I've already spent enough today."</span></div>
+      <div class="a"><span class="m">✔</span><span>Which is exactly why the price is down by more than a third. You've taken the first step — I'd rather you not stop halfway because of ten dollars.</span></div>
+    </div>
+
+    <div class="qa">
+      <div class="q"><span class="m">?</span><span>"I can figure out the delivery on my own."</span></div>
+      <div class="a"><span class="m">✔</span><span>You will. Over about three years, from your own mistakes, in front of real kids who were in the room while you learned. This is the same lessons without the three years — and without the kids who left in the meantime.</span></div>
+    </div>
+
+    <div class="qa">
+      <div class="q"><span class="m">?</span><span>"I'm not sure I'd actually use it."</span></div>
+      <div class="a"><span class="m">✔</span><span>Fair — most guides get downloaded and never opened. So this one isn't built to be studied. It's built to change <strong>one habit per week for four weeks</strong>. Week one is a five-second pause after you speak. That's the whole assignment, and you'll know by Tuesday whether it works.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · OFFER -->
+<section id="checkout" style="background:var(--light2)">
+  <div class="wrap">
+    <p class="center eyebrow">FINAL OFFER</p>
+    <h2 class="center">Same content — only the price changes</h2>
+    <p class="center muted" style="margin-bottom:20px">Nothing has been removed. Same guide, same masterclass, same 30-day plan.</p>
+
+    <div class="mockup-offer">
+      <img src="images/upsell-mockup-offer.webp" alt="Learn to Coach Kids: the 28-page guide plus the masterclass" width="1254" height="820" loading="lazy" decoding="async">
+    </div>
+    <p class="mockcap" style="margin-bottom:22px">The 28-page guide + the masterclass.</p>
+
+    <div class="pricebox">
+      <span class="saveflag">LAST CHANCE — THIS SCREEN ONLY</span>
+      <p class="lbl">A minute ago it was <s>$27.99</s></p>
+      <span class="now">Now: $17.97 — one-time</span>
+      <div class="once">One payment · instant access · this screen only</div>
+
+      <ul class="outcomes">
+        <li><span class="tick">✓</span><span>The 28-page guide — six modules on how a class is actually delivered</span></li>
+        <li><span class="tick">✓</span><span>The masterclass — the whole method, end to end</span></li>
+        <li><span class="tick">✓</span><span>The film-your-class checklist — five things to watch in your own video</span></li>
+        <li><span class="tick">✓</span><span>The 30-day plan — one habit a week, not six at once</span></li>
+        <li><span class="tick">✓</span><span>Every future update, free, forever</span></li>
+      </ul>
+
+      <div class="seclabel">SECURE CHECKOUT</div>
+
+      <!-- ⬇⬇⬇ HOTMART SALES FUNNEL WIDGET — US DOWNSELL ($17.97) ⬇⬇⬇ -->
+      <div class="checkout">
+<!-- HOTMART - Sales Funnel Widget -->
+<div id="hotmart-sales-funnel"></div>
+<script src="https://checkout.hotmart.com/lib/hotmart-checkout-elements.js"></script>
+<script>
+checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel')
+</script>
+<!-- HOTMART - Sales Funnel Widget -->
+      </div>
+      <!-- ⬆⬆⬆ END HOTMART EMBED ⬆⬆⬆ -->
+
+      <p class="seclock">🔒 Secure encrypted payment. Digital delivery is immediate.</p>
+    </div>
+
+    <div class="decline">
+      <a href="#">No thanks — take me straight to my downloads.</a>
+    </div>
+  </div>
+</section>
+
+<!-- 7 · GUARANTEE -->
+<section>
+  <div class="wrap">
+    <div class="guar">
+      <span class="badge">YOUR RISK STAYS AT ZERO</span>
+      <h3 style="font-size:22px">Same 14-day guarantee. And you keep it.</h3>
+      <p class="muted" style="margin:0">Try one habit for a week. If your Tuesday doesn't feel different, email me and I'll refund you in full — and the files stay yours. Your Playbook is unaffected either way.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 8 · CLOSER -->
+<section style="background:var(--light)">
+  <div class="wrap">
+    <p class="couplet">Coaches don't quit the kids class because they lack jiu-jitsu.<br><span>They quit because every Tuesday feels like starting over.</span></p>
+    <p class="center muted small" style="margin-top:16px">This screen will not appear again.</p>
+  </div>
+</section>
+
+<footer>
+  <p style="font-family:'Bebas Neue',sans-serif;font-size:19px;color:var(--ink);letter-spacing:.03em;margin:0 0 8px">The BJJ Kids Class Playbook</p>
+  <p class="small" style="margin:0 0 9px">Not affiliated with, endorsed by, or connected to the IBJJF, the UFC, or any academy or affiliation.</p>
+  <p class="small" style="margin:0">© 2026 · All rights reserved.</p>
+</footer>
+
+<script>
+// Funnel progress — real step indicator. Purchase → upsell → this screen → downloads.
+(function(){
+  var fill = document.getElementById('fill');
+  setTimeout(function(){ fill.style.width = '85%'; }, 250);
+})();
+</script>
+
+</body>
+</html>
